@@ -49,7 +49,7 @@ export default {
       z-index: 1;
   } 
   .header{
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(255, 255, 255, 0.9);
     margin-left: calc(200px + 3rem);
     margin-top: 1rem;
     font-size: 3rem;
@@ -63,7 +63,7 @@ export default {
     margin-left: 100px;
     margin-top: 3rem;
     font-size: 3rem;
-    opacity: .8;
+    opacity: .95;
     color: #A5DEF1;
     letter-spacing: 9px;
     text-shadow: 
