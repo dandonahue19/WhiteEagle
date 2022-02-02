@@ -13,6 +13,10 @@
     <div class="announcements">
       <div class="announcements-card">
         <h3>Announcements</h3>
+        <div class="announcement" v-for="announcement in announcements" :key="announcement.id">
+          <h4>{{announcement.name}}</h4>
+          <p>{{announcement.description}}</p>
+        </div>
     </div>
     </div>
   </div>
@@ -25,6 +29,23 @@ export default {
   name: "Home",
   components: {
   },
+  data() {
+    return{
+      announcements:[]
+    }
+  },
+  created(){
+    let  query = `{
+      announcements{
+        name
+        description
+      }
+    }`
+    this.$axios.get('graphql', {params:{query}}).then((res) => {
+      console.log(res.data)
+      this.announcements = res.data.data.announcements
+    })
+  }
 };
 </script>
 <style lang="scss">

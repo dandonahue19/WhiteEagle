@@ -68,8 +68,8 @@ body{
     background-color: #2a3950;
     box-shadow: 3px -3px 6px rgba(255, 255, 255, 0.5), 
       1px -1px 2px rgba(204, 198, 198, 0.616), 
-      inset -2px 2px 10px rgba(255, 255, 255, 0.4), 
-      inset 2px -2px 7px rgb(139 161 169 / 77%), 
+      inset -2px 2px 15px rgba(255, 255, 255, 0.2), 
+      inset 2px -2px 15px rgb(139 161 169 / 20%), 
       -3px 3px 20px rgb(139 161 169 / 77%), 
       -1px 1px 2px rgb(139 161 169 / 77%) !important;
     .logo{
