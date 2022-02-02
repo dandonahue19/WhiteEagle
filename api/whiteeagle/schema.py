@@ -11,7 +11,7 @@ class AnnouncementType(DjangoObjectType):
 class Query(graphene.ObjectType):
     announcements = graphene.List(AnnouncementType)
 
-    def resolve_all_ingredients(root, info):
+    def resolve_announcements(root, info):
         return Announcement.objects.all()
 
 schema = graphene.Schema(query=Query)
