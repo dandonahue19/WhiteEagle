@@ -23,6 +23,8 @@
           ref="calendar"
           v-model="focus"
           :start="now"
+          :events="events"
+          :event-color="getEventColor"
           color="primary"
         ></v-calendar>
     </div>
@@ -44,6 +46,45 @@ export default {
       focus: moment().format('YYYY-MM-DD'),
       events: [],
     }
+  },
+  created(){
+    let  query = `{
+      events{
+        id,
+        name
+        dt
+        dtEnd
+        reoccuring
+        dow
+        time
+        description
+        location
+        type{
+          name
+          color
+          id
+        }
+      }
+    }`
+    this.$axios.get('graphql', {params:{query}}).then((res) => {
+      res.data.data.events.forEach((event) => {
+        if (event.reoccuring){
+          let start = moment().startOf('month').startOf('week')
+          let end = moment().endOf('month').endOf('week')
+          while(start<end){
+            console.log(`${start.toDate()}T${event.time}`)
+            let eventStart = start.clone().add(event.dow, 'd')
+            this.events.push({
+              name: event.name,
+              start: eventStart.toDate(),
+              end: eventStart.clone().add(1, 'h').toDate(),
+              color: event.type.color
+            })
+            start.add(1, 'w')
+          }
+        }
+      })
+    })
   },
   computed: {
     title: function(){
@@ -69,6 +110,10 @@ export default {
     },
     next () {
       this.$refs.calendar.next()
+    },
+    getEventColor (event) {
+      console.log(event.color)
+      return event.color
     },
   }
 };
