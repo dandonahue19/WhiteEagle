@@ -126,11 +126,11 @@ export default {
       max-height: 35vh;
       margin: auto;
       border-radius: 5px;
-      border: 1px solid rgba(0, 0, 0, 0.712);
-      box-shadow: 3px -3px 8px rgba(90, 122, 171, 0.603), 
-        1px -1px 2px rgba(90, 122, 171, 0.603), 
-        -3px 3px 20px rgb(26 31 40 / 54%), 
-        -1px 1px 2px rgb(26 31 40 / 54%) !important;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: 3px -3px 8px rgba(90, 122, 171, 0.3), 
+        1px -1px 2px rgba(90, 122, 171, 0.3), 
+        -3px 3px 20px rgb(26 31 40 / 30%), 
+        -1px 1px 2px rgb(26 31 40 / 3%) !important;
     };
   }
   .announcements{
@@ -154,10 +154,10 @@ export default {
       border-radius: 5px;
       box-shadow: 3px -3px 8px #dbe9ff17, 
         1px -1px 2px #dbe9ff17, 
-        -3px 3px 20px rgb(43 56 76 / 47%), 
-        -1px 1px 2px rgb(43 56 76 / 47%), 
-        inset -2px 2px 10px rgb(180 194 217 / 55%), 
-        inset 2px -2px 7px rgb(56 67 86 / 54%) !important;
+        -3px 3px 20px rgb(43 56 76 / 30%), 
+        -1px 1px 2px rgb(43 56 76 / 30%), 
+        inset -2px 2px 10px rgb(180 194 217 / 30%), 
+        inset 2px -2px 7px rgb(56 67 86 / 30%) !important;
         text-align: center;
         h3{
           font-size:1.5rem;

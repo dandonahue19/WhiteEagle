@@ -27,11 +27,11 @@
 
 export default {
   name: "App",
-  data: () => ({
-    return: {
+  data() {
+    return {
       tab: 0
     }
-  }),
+  },
 };
 </script>
 <style lang="scss">
@@ -66,12 +66,12 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     background-color: #2a3950;
-    box-shadow: 3px -3px 6px rgba(255, 255, 255, 0.5), 
-      1px -1px 2px rgba(204, 198, 198, 0.616), 
+    box-shadow: 3px -3px 68px rgba(255, 255, 255, 0.3), 
+      1px -1px 4px rgba(204, 198, 198, 0.3), 
       inset -2px 2px 15px rgba(255, 255, 255, 0.2), 
       inset 2px -2px 15px rgb(139 161 169 / 20%), 
-      -3px 3px 20px rgb(139 161 169 / 77%), 
-      -1px 1px 2px rgb(139 161 169 / 77%) !important;
+      -3px 3px 20px rgb(139 161 169 / 40%), 
+      -1px 1px 2px rgb(139 161 169 / 40%) !important;
     .logo{
       position: absolute;
       z-index: 999;
@@ -81,11 +81,11 @@ body{
       width: 200px;
       height: 200px;
       opacity: .95;
-      box-shadow: 3px -3px 6px rgba(255, 255, 255, 0.5), 
-        1px -1px 2px rgba(255, 255, 255, 0.616), 
+      box-shadow: 3px -3px 6px rgba(255, 255, 255, 0.4), 
+        1px -1px 2px rgba(255, 255, 255, 0.5), 
         inset -2px 2px 10px rgba(255, 255, 255, 0.212), 
         -3px 3px 6px rgba(0, 0, 0, 0.3), 
-        -1px 1px 2px rgba(0, 0, 0, 0.5);
+        -1px 1px 2px rgba(0, 0, 0, 0.4);
       
       img{
         width: 100%;
