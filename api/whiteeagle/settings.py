@@ -25,7 +25,7 @@ SECRET_KEY = '@r@3y0(5t5&k2nge4()xe6f^ts7!9%%tzw**j*20vjgq8(2@n%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["http://localhost:8080","http://localhost:8000","localhost", 'ec2-3-94-180-253.compute-1.amazonaws.com:8000']
+ALLOWED_HOSTS = ["http://localhost:8080","http://localhost:8000","localhost", 'ec2-3-94-180-253.compute-1.amazonaws.com']
 
 AUTH_USER_MODEL = 'users.MartialArtist'
 
