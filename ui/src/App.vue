@@ -62,14 +62,18 @@ $font-family:'Optima';
   }
   font-family: $font-family, sans-serif !important;
 }
+html{
+  height:100%
+}
 body{
+  height: 100%;
   background-color: #d1e3e9;
 }
 .v-main{
   z-index: 9999
 }
 .wema{
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   padding: 1rem;
   display: flex;
