@@ -152,7 +152,7 @@ body{
   .wema{
     padding: 0;
     .home{
-      height: 100vh;
+      height: 100%;
       margin-top:0rem;
       margin-bottom: 0;
       border-radius: 0;
