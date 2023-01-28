@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="welcome">
     <h1 class="header">White Eagle Martial Arts</h1>
-    <h2 class="tagline">Healing Lives through Martial Arts</h2>
+    <h2 class="tagline">Healing Lives Through Martial Arts</h2>
     <div class="headerGroup">
       <h3>Strengthen The Body</h3>
       <h3>Train The Mind</h3>
@@ -49,7 +49,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.home{
+.welcome{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -165,6 +165,72 @@ export default {
           margin: 1rem;
           border-bottom: 1px solid rgba(255,255,255,.4);
         }
+    }
+  }
+}
+@media(max-width: 1000px){
+  .welcome{
+    height: 100%;
+    .header{
+      margin-left: 0;
+      margin-top: 0;
+      padding: 1rem0.5rem;
+      font-size: 2.25rem;
+      text-align: center;
+      color: #ffffff;
+      background: #cb2b2beb;
+      height: 20%;
+      display: flex;
+      align-items: center;
+    }
+    .tagline{
+      font-size: 1.25rem;
+      margin-top: 0rem;
+      margin-left: 0rem;
+      padding: 1rem;
+      background: #121b26;
+      text-align: center;
+    }
+    .headerGroup{
+      flex-direction: column;
+      order: 4;
+      margin: 0;
+      h3{
+        letter-spacing: 7px;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0.5rem;
+        text-shadow: 1px 17px 4px rgb(255 255 255 / 29%);
+      }
+    }
+    .classPhoto{
+      margin-top: 0;
+      margin-bottom: 0;
+      order: 3;
+      img{
+        border-radius: 0;
+      }
+      
+    }
+    .announcements{
+      position: relative;
+      width: 100%;
+      order: 5;
+      bottom: 0;
+      height: 15%;
+      .announcements-card{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        margin-top:0;
+        h3{
+          border-bottom: none;
+          font-size: 1rem;
+          padding-bottom: 0.5rem;
+          margin: 0.5rem;
+        }
+      }
     }
   }
 }

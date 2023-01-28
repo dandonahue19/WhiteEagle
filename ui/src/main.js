@@ -7,7 +7,7 @@ import axios from 'axios';
 
 Vue.config.productionTip = false;
 
-axios.defaults.baseURL = 'http://localhost:8000/api';
+axios.defaults.baseURL = 'http://ec2-3-94-180-253.compute-1.amazonaws.com:8000/0/api';
 Object.defineProperty(Vue.prototype, '$moment', {value: moment});
 Object.defineProperty(Vue.prototype, '$axios', {value: axios});
 
