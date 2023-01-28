@@ -1,5 +1,7 @@
 <template>
   <v-app>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <div class="wema">
       <div class="home">
         <div class="logo rounded-circle">
@@ -14,9 +16,9 @@
           </v-tabs>
         </div>
         <div class="mobileNav">
-          <div class="logo rounded-circle">
+          <router-link to="/" tag="div" class="logo rounded-circle">
             <img  src="./assets/wemaLogo.png"/>
-          </div>
+          </router-link>
           <v-btn to="/about" plain class="navItem">
             <v-icon>mdi-information-outline</v-icon>
             <p>ABOUT</p>
