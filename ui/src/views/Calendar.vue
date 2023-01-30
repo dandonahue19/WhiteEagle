@@ -1,6 +1,5 @@
 <template>
   <div class="calendar">
-    <h1 class="header">Calendar</h1>
     <div class="calendarWrapper">
       <div class="options">
         <v-btn  outlined class="mr-4" @click="setToday">
@@ -27,6 +26,9 @@
           @change="calendarChange"
           color="primary"
         ></v-calendar>
+      <div class="events">
+        <h3>Events</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -152,6 +154,34 @@ export default {
         margin: 0;
         letter-spacing: 2px;
         font-size: 1.5rem;
+      }
+    }
+    .events{
+      padding: 1rem;
+      h3{
+        color: white;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+@media(max-width: 1000px){
+  .calendar{
+    max-height: unset;
+    .calendarWrapper{
+      margin: 0 1rem;
+      padding-top:1rem;
+      .options{
+        padding: 0 1rem;
+        p{
+          font-size: 1.25rem;
+        }
+      }
+      .v-calendar{
+        height: 80%;
+        border-radius: 5px;
+        overflow: hidden;
+        border-color: transparent;
       }
     }
   }
