@@ -55,7 +55,11 @@ export default {
   created(){
     let viewportH = window.visualViewport.height;
     console.log(viewportH);
-  }
+  },
+  watch: {
+    'window.visualViewport.height': function(){
+      this.vh = window.visualViewport.height;
+    }
 };
 </script>
 <style lang="scss">
