@@ -105,7 +105,8 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #2a3950;
+    // background-color: #2a3950;
+    background-color: #131d28;
     box-shadow: 3px -3px 68px rgba(255, 255, 255, 0.3), 
       1px -1px 4px rgba(204, 198, 198, 0.3), 
       inset -2px 2px 15px rgba(255, 255, 255, 0.2), 
