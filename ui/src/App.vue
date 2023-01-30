@@ -53,11 +53,18 @@ export default {
     }
   },
   created(){
-    let viewportH = window.visualViewport.height;
-    console.log(viewportH);
+    
   },
-  watch: {
-    'window.visualViewport.height': function(){
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
+  },
+  beforeDestroy() { 
+    window.removeEventListener('resize', this.onResize); 
+  },
+  methods: {  
+    onResize() {
       this.vh = window.visualViewport.height;
     }
   }
