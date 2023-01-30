@@ -135,6 +135,7 @@ body{
     }
     .mobileNav{
       display: none;
+      transition: all .1s;
     }
     .nav{
       padding: .5rem 3rem;
