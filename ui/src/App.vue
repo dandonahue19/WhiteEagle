@@ -15,7 +15,7 @@
             <v-tab>Tuition</v-tab>
           </v-tabs>
         </div>
-        <div class="mobileNav">
+        <div class="mobileNav" :style="{'top': (vh-75)+'px'}">
           <router-link to="/" tag="div" class="logo rounded-circle">
             <img  src="./assets/wemaLogo.png"/>
           </router-link>
@@ -48,38 +48,13 @@ export default {
   name: "App",
   data() {
     return {
-      tab: 0
+      tab: 0,
+      vh: window.visualViewport.height,
     }
   },
   created(){
-    var browser = window,
-    doc = browser.document;
-
-    // If there's a hash, or addEventListener is undefined, stop here
-    if ( !location.hash || !browser.addEventListener ) {
-
-      //set to 1
-      window.scrollTo( 0, 1 );
-      var scrollTop = 1,
-
-      //reset to 0 if needed
-      checkWindowBody = setInterval(function(){
-        if( doc.body ){
-          clearInterval( checkWindowBody );
-          scrollTop = "scrollTop" in doc.body ? doc.body.scrollTop : 1;
-          browser.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
-        } 
-      }, 15 );
-
-      if (browser.addEventListener) {
-        browser.addEventListener("load", function(){
-          setTimeout(function(){
-            //reset to hide address
-            browser.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
-          }, 0);
-        }, false );
-      }
-    }
+    let viewportH = window.visualViewport.height;
+    console.log(viewportH);
   }
 };
 </script>
