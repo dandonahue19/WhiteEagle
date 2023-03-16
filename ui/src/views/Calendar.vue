@@ -186,7 +186,7 @@ export default {
         }
       }
       .v-calendar{
-        margin-top: 3v0px;
+        margin-top: 30px;
         height: 80%;
         border-radius: 5px;
         overflow: hidden;

@@ -200,10 +200,10 @@ export default {
     }
     .tagline{
       font-size: 1rem;
-      margin-top: 15px;
-      margin-left: 150px;
-      padding: 1rem;
-      background: #121b26;
+      margin-top: 30px;
+      padding: 9px;
+      padding-left: 150px;
+      background: #cd3014;
       color: white;
       text-align: left;
     }
@@ -212,7 +212,7 @@ export default {
       order: 4;
       margin: 0;
       height: 100%;
-      padding-bottom: 10px;
+      padding: 10px 0;
       .imageCard{
         width: calc(100% - 20px);
         min-width: unset;
