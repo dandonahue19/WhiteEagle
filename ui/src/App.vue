@@ -4,7 +4,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <div class="wema">
       <div class="home">
-
+        <div class="logo rounded-circle">
+          <img  src="./assets/wemaLogo.png"/>
+        </div>
         <div class="nav">
           <v-tabs v-model="tab" centered>
             <v-tab to="/">Welcome</v-tab>
@@ -13,14 +15,12 @@
             <v-tab to="/calendar">Calendar</v-tab>
             <v-tab>Tuition</v-tab>
           </v-tabs>
-          <div class="logo rounded-circle">
-            <img  src="./assets/wemaLogo.png"/>
-          </div>
         </div>
         <div class="mobileNav" :style="{'top': (vh-75)+'px'}">
-          <router-link to="/" tag="div" class="logo rounded-circle">
-            <img  src="./assets/wemaLogo.png"/>
-          </router-link>
+          <v-btn to="/" plain class="navItem">
+            <v-icon>mdi-human-greeting</v-icon>
+            <p>Welcome</p>
+          </v-btn>
           <v-btn to="/about" plain class="navItem">
             <v-icon>mdi-information-outline</v-icon>
             <p>ABOUT</p>
@@ -104,11 +104,14 @@ body{
     // background-color: #2a3950;
     background-color: #131d28;
     .logo{
+      position: absolute;
+      top: 25px;
+      left: 0;
+      right:0;
       z-index: 999;
       width: 200px;
       height: 200px;
       margin: auto;
-      margin-top: -125px;
       img {
         width: 100%;
         height: 100%;
@@ -155,7 +158,11 @@ body{
       margin-bottom: 0;
       border-radius: 0;
       .logo{
-        display:none;
+        top: 15px;
+        left: 15px;
+        width: 125px;
+        height: 125px;
+        margin: 0;
       }
       .nav{
         display: none;
@@ -173,18 +180,7 @@ body{
         align-items: center;
         background: white;
         z-index: 99999;
-        .logo{
-          display: block;
-          width: 125px;
-          height: 125px;
-          top: unset;
-          margin: 0;
-          bottom: 0.5rem;
-          left: 0.5rem;
-          img{
-            box-shadow: none;
-          }
-        }
+
         .navItem{
           display: flex;
           flex-direction: column;
@@ -192,9 +188,12 @@ body{
           padding: 0;
           height: 75px;
           border-radius: 0;
-          width: 33%;
-          &:nth-child(3){
+          width: 25%;
+          &:nth-child(2){
             border-left: 1px solid #00000036;
+            border-right: 1px solid #00000036;
+          }
+          &:nth-child(3){
             border-right: 1px solid #00000036;
           }
           .v-btn__content{

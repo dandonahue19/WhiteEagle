@@ -66,19 +66,6 @@ export default {
   height: calc(100% - 15rem);
   position: absolute;
   width: 100%;
-  &::before {    
-      content: "";
-      background-image: url('../assets/trees.jpg');
-      background-size: cover;
-      border-radius: 5px;
-      position: absolute;
-      top: 0px;
-      left: 0rem;
-      width: 100%;
-      height: 100%;
-      opacity: 0.045;
-      z-index: 1;
-  } 
   .header{
     color: rgba(255, 255, 255, 0.9);
     margin-left: calc(200px + 3rem);
@@ -198,6 +185,7 @@ export default {
 @media(max-width: 1000px){
   .welcome{
     height: 100%;
+    justify-content: flex-start;
     .header{
       margin-left: 0;
       margin-top: 0;
@@ -211,33 +199,47 @@ export default {
       align-items: center;
     }
     .tagline{
-      font-size: 1.25rem;
-      margin-top: 0rem;
-      margin-left: 0rem;
+      font-size: 1rem;
+      margin-top: 15px;
+      margin-left: 150px;
       padding: 1rem;
       background: #121b26;
-      text-align: center;
+      color: white;
+      text-align: left;
     }
     .headerGroup{
       flex-direction: column;
       order: 4;
       margin: 0;
-      h3{
-        letter-spacing: 7px;
-        font-size: 1rem;
-        text-align: center;
-        margin: 0.5rem;
-        text-shadow: 1px 17px 4px rgb(255 255 255 / 29%);
+      .imageCard{
+        width: calc(100% - 20px);
+        min-width: unset;
+        max-width: unset;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        img{
+          margin: 0 auto;
+          min-width: unset;
+          width: unset;
+          max-width: unset;
+          max-height: 20vh;
+        }
+        h3{
+          position: relative;
+          width: calc(100% - 2rem);
+          margin: 0 auto;
+          margin-top: -25px;
+          padding: .5rem;
+          letter-spacing: 7px;
+          font-size: 1rem;
+          text-align: center;
+          text-shadow: 1px 17px 4px rgb(255 255 255 / 29%);
+        }
       }
-    }
-    .classPhoto{
-      margin-top: 0;
-      margin-bottom: 0;
-      order: 3;
-      img{
-        border-radius: 0;
-      }
-      
+
     }
     .announcements{
       position: relative;
