@@ -2,7 +2,7 @@
   <div class="calendar">
     <div class="calendarWrapper">
       <div class="options">
-        <v-btn  outlined class="mr-4" @click="setToday">
+        <v-btn outlined class="mr-4 today" @click="setToday">
           Today
         </v-btn>
         <v-btn fab text small @click="prev">
@@ -170,14 +170,23 @@ export default {
     max-height: unset;
     .calendarWrapper{
       margin: 0 1rem;
-      padding-top:1rem;
+      padding-top:3rem;
       .options{
-        padding: 0 1rem;
+        padding: 0 10px;
+        margin-left: 135px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .today{
+          width: 100%;
+          margin: 0;
+          margin-right: 0 !important;
+        }
         p{
           font-size: 1.25rem;
         }
       }
       .v-calendar{
+        margin-top: 3v0px;
         height: 80%;
         border-radius: 5px;
         overflow: hidden;
