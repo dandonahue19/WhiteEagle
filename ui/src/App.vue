@@ -4,16 +4,18 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <div class="wema">
       <div class="home">
-        <div class="logo rounded-circle">
-          <img  src="./assets/wemaLogo.png"/>
-        </div>
+
         <div class="nav">
-          <v-tabs v-model="tab">
+          <v-tabs v-model="tab" centered>
             <v-tab to="/">Welcome</v-tab>
-            <v-tab to="/about">About</v-tab>
+            <v-tab to="/about">Info</v-tab>
+            <v-tab class="placeholder"></v-tab>
             <v-tab to="/calendar">Calendar</v-tab>
             <v-tab>Tuition</v-tab>
           </v-tabs>
+          <div class="logo rounded-circle">
+            <img  src="./assets/wemaLogo.png"/>
+          </div>
         </div>
         <div class="mobileNav" :style="{'top': (vh-75)+'px'}">
           <router-link to="/" tag="div" class="logo rounded-circle">
@@ -94,71 +96,46 @@ body{
 .wema{
   height: 100%;
   width: 100vw;
-  padding: 1rem;
   display: flex;
   justify-content: center;
   .home{
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    width: 1250px;
+    width: 100%;
     position: relative;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     // background-color: #2a3950;
     background-color: #131d28;
-    box-shadow: 3px -3px 68px rgba(255, 255, 255, 0.3), 
-      1px -1px 4px rgba(204, 198, 198, 0.3), 
-      inset -2px 2px 15px rgba(255, 255, 255, 0.2), 
-      inset 2px -2px 15px rgb(139 161 169 / 20%), 
-      -3px 3px 20px rgb(139 161 169 / 40%), 
-      -1px 1px 2px rgb(139 161 169 / 40%) !important;
     .logo{
-      position: absolute;
       z-index: 999;
-      left: 0;
-      top: -7rem;
-      margin: 1rem;
       width: 200px;
       height: 200px;
-      opacity: .95;
-      
-      img{
+      margin: auto;
+      margin-top: -125px;
+      img {
         width: 100%;
         height: 100%;
         border-radius: 200px;
-        box-shadow: 3px -3px 6px rgba(255, 255, 255, 0.4), 
-          1px -1px 2px rgba(255, 255, 255, 0.5), 
-          inset -2px 2px 10px rgba(255, 255, 255, 0.212), 
-          -3px 3px 6px rgba(0, 0, 0, 0.3), 
-          -1px 1px 2px rgba(0, 0, 0, 0.4);
-        }
+      }
     }
     .mobileNav{
       display: none;
       transition: all .1s;
     }
     .nav{
-      padding: .5rem 3rem;
-      overflow: hidden;
-      position: absolute;
-      top: -4rem;
-      left: 200px; 
-      width: calc(100% - 2rem);
-      border-radius: 5px;
+      width: 100%;
+      margin-top: 100px;
       .v-tabs{
+        background: white;
         .v-tabs-bar{
           background-color: transparent;
           .v-tab{
-            color: #508DA3;
+            color: #000000ba;
+            width: 135px;
             opacity: .8;
-            font-weight: 400 !important;
+            font-weight: 600 !important;
             letter-spacing: 1px;
             font-size: 1.25rem !important;
-            text-shadow: -2px 2px 4px rgba(0,0,0,.35),
-            2px -2px 3px rgba(255,255,255,.6),
-            1px -1px 1px rgba(255,255,255,.6),
-            -1px 1px 1px rgba(0,0,0,.35);
+            &.placeholder{
+              width: 225px;
+            }
           }
         }
       }
@@ -195,7 +172,6 @@ body{
         justify-content: space-around;
         align-items: center;
         background: white;
-        padding-left: 110px;
         z-index: 99999;
         .logo{
           display: block;
