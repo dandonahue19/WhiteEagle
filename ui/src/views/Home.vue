@@ -211,6 +211,8 @@ export default {
       flex-direction: column;
       order: 4;
       margin: 0;
+      height: 100%;
+      padding-bottom: 10px;
       .imageCard{
         width: calc(100% - 20px);
         min-width: unset;
@@ -220,6 +222,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        max-height: 20vh;
         img{
           margin: 0 auto;
           min-width: unset;
@@ -229,14 +232,16 @@ export default {
         }
         h3{
           position: relative;
-          width: calc(100% - 2rem);
+          width: calc(100% - 3rem);
           margin: 0 auto;
           margin-top: -25px;
-          padding: .5rem;
+          padding: .75rem;
           letter-spacing: 7px;
           font-size: 1rem;
+          font-weight: 600;
           text-align: center;
-          text-shadow: 1px 17px 4px rgb(255 255 255 / 29%);
+          text-shadow: 1px 11px 4px rgb(255 255 255 / 29%);
+          background: #000000de;
         }
       }
 
